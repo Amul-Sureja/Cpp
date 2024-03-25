@@ -17,20 +17,29 @@ public:
     {
         cout << "the id of this employee is " << id << " and this is employee number " << count << endl;
     }
+    static void getCount(void)
+    {
+        // cout<<id; // <= throws an error
+        cout << "the value of count is " << count << endl;
+    }
 };
-// static data member
+// count is static data member of class employee
 int Employee ::count = 1000; // defult value is 0
 int main()
 {
-    Employee amul;
+    Employee amul, krish, man;
     // amul.id = 1;   // can not define because the private member
     // amul.count = 1; // can not define because the private member
     amul.setData();
     amul.getData();
+    Employee::getCount();
+
+    krish.setData();
+    krish.getData();
+    Employee::getCount();
+
+    man.setData();
+    man.getData();
+    Employee::getCount();
     return 0;
 }
-
-
-
-
-// 24--12:39
